@@ -35,15 +35,29 @@ public class KS_ArrayList<T> {
 		int copyIndex = 0;
 		boolean found = false;
 		for(int i = 0; i < numOfItems; i++) {
-			if(arr[i] == element && found == false) {
-				found = true;
-				continue;
+			if(element instanceof String) {
+				if(arr[i].equals(element) && found == false) {
+					found = true;
+					continue;
+				}
+				else {
+					copyarr[copyIndex] = arr[i];
+					copyIndex++;
+					
+				}
 			}
 			else {
-				copyarr[copyIndex] = arr[i];
-				copyIndex++;
-				
+				if(arr[i] == element && found == false) {
+					found = true;
+					continue;
+				}
+				else {
+					copyarr[copyIndex] = arr[i];
+					copyIndex++;
+					
+				}
 			}
+		
 		}
 		if(found == true) {
 			numOfItems--;

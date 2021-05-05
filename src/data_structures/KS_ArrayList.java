@@ -30,7 +30,7 @@ public class KS_ArrayList<T> {
 		arr[numOfItems] = element;
 		numOfItems++;
 	}
-	public void remove(T element) {
+	public void remove(Object element) {
 		Object copyarr[] = new Object[capacity];
 		int copyIndex = 0;
 		boolean found = false;
@@ -67,6 +67,23 @@ public class KS_ArrayList<T> {
 			arr[i] =  copyarr[i];
 		}
 
+	}
+	public void remove(int index) {
+		Object copyarr[] = new Object[capacity];
+		int copyIndex = 0;
+		for(int i = 0; i < numOfItems; i++) {
+			if(i == index) {
+				continue;
+			}
+			copyarr[copyIndex] = arr[i];
+			copyIndex++;
+		}
+		arr =  new Object[capacity];
+		for(int i = 0; i < numOfItems; i++) {
+			arr[i] =  copyarr[i];
+		}
+		numOfItems--;
+		
 	}
 	public Object get(int index) {
 		if(index > numOfItems-1) {

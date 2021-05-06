@@ -69,6 +69,9 @@ public class KS_ArrayList<T> {
 
 	}
 	public void remove(int index) {
+		if(index >= numOfItems) {
+			throw new java.lang.IndexOutOfBoundsException();
+		}
 		Object copyarr[] = new Object[capacity];
 		int copyIndex = 0;
 		for(int i = 0; i < numOfItems; i++) {

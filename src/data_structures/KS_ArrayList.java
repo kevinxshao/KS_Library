@@ -30,6 +30,50 @@ public class KS_ArrayList<T> {
 		arr[numOfItems] = element;
 		numOfItems++;
 	}
+	public void add(int index, T element) {
+		if(index > numOfItems) {
+			throw new java.lang.ArrayIndexOutOfBoundsException();
+		}
+		if(numOfItems == capacity) {
+			Object copyarr[] = new Object[numOfItems];
+			for(int i = 0; i < numOfItems; i++) {
+				copyarr[i] = arr[i];
+			}
+			capacity = capacity*3/2+1;
+			numOfItems++;
+			arr = new Object[capacity];
+			int copyarrindex = 0;
+			for(int i =0; i < numOfItems; i++) {
+				if(i == index) {
+					arr[i] = element;
+				}
+				else {
+					arr[i] = copyarr[copyarrindex];
+					copyarrindex++;
+				}
+			}
+			numOfItems++;
+		}
+		else {
+			Object copyarr[] = new Object[numOfItems];
+			for(int i = 0; i < numOfItems; i++) {
+				copyarr[i] = arr[i];
+			}
+			numOfItems++;
+			arr = new Object[capacity];
+			int copyarrindex = 0;
+			for(int i =0; i < numOfItems; i++) {
+				if(i == index) {
+					arr[i] = element;
+				}
+				else {
+					arr[i] = copyarr[copyarrindex];
+					copyarrindex++;
+				}
+			}
+		}
+		
+	}
 	public void remove(Object element) {
 		Object copyarr[] = new Object[capacity];
 		int copyIndex = 0;

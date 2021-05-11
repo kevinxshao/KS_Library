@@ -113,7 +113,7 @@ public class KS_ArrayList<T> {
 
 	}
 	public void remove(int index) {
-		if(index >= numOfItems) {
+		if(index >= numOfItems || index < 0) {
 			throw new java.lang.IndexOutOfBoundsException();
 		}
 		Object copyarr[] = new Object[capacity];

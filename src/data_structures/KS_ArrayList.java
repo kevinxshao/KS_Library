@@ -31,7 +31,7 @@ public class KS_ArrayList<T> {
 		numOfItems++;
 	}
 	public void add(int index, T element) {
-		if(index > numOfItems) {
+		if(index > numOfItems || index < 0) {
 			throw new java.lang.ArrayIndexOutOfBoundsException();
 		}
 		if(numOfItems == capacity) {

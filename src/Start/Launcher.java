@@ -15,7 +15,8 @@ public class Launcher {
 		arr.add(2);
 		arr.add(3);
 		arr.add(4);
-
+		
+		ks.get(1);
 
 		System.out.println(ks.size());
 		System.out.println(arr.size());

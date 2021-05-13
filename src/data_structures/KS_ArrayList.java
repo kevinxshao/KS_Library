@@ -133,7 +133,7 @@ public class KS_ArrayList<T> {
 		
 	}
 	public Object get(int index) {
-		if(index > numOfItems-1) {
+		if(index > numOfItems-1 || index < 0) {
 			throw new java.lang.IndexOutOfBoundsException();
 		}
 		return (T) arr[index];

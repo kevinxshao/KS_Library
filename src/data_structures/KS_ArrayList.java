@@ -155,5 +155,24 @@ public class KS_ArrayList<T> {
 		return capacity;
 	}
 	
+	public int indexOf(Object element) {
+		if(element instanceof String) {
+			for(int i =0; i < numOfItems; i++) {
+				if(element.equals(arr[i])) {
+					return i;
+				}
+			}
+			
+		}
+		else {
+			for(int i =0; i < numOfItems; i++) {
+				if(element == arr[i]) {
+					return i;
+				}
+			}
+		}
+		return -1;
+	}
+	
 
 }

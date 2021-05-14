@@ -173,6 +173,15 @@ public class KS_ArrayList<T> {
 		}
 		return -1;
 	}
-	
+	public String toString() {
+		String output = "[";
+		for(int i = 0; i < numOfItems; i++) {
+			output = output.concat(arr[i].toString());
+			if(i < numOfItems-1) {
+				output = output.concat(", ");
+			}
+		}
+		return output.concat("]");
+	}
 
 }

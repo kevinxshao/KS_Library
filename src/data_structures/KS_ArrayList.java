@@ -183,5 +183,24 @@ public class KS_ArrayList<T> {
 		}
 		return output.concat("]");
 	}
+	
+	public boolean contains(Object element) {
+		if(element instanceof String) {
+			for(int i =0; i < numOfItems; i++) {
+				if(element.equals(arr[i])) {
+					return true;
+				}
+			}
+			
+		}
+		else {
+			for(int i =0; i < numOfItems; i++) {
+				if(element == arr[i]) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 
 }

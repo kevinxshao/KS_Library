@@ -202,5 +202,9 @@ public class KS_ArrayList<T> {
 		}
 		return false;
 	}
-
+	public void clear() {
+		capacity = 10;
+		arr = new Object[capacity];
+		numOfItems = 0;
+	}
 }

@@ -10,16 +10,31 @@ public class Launcher {
 		arr.add("hello");
 		arr.add("balah");
 		arr.add("shoo");
+		arr.clear();
 		
 		ks.add(new String("hi"));
 		ks.add("hello");
 		ks.add("balah");
 		ks.add("shoo");
-		System.out.println(arr.contains("hi"));
-		System.out.println(ks.contains("hi"));
-		System.out.println("");
-		for(int i = 0; i < ks.size(); i++) {
-			System.out.println(ks.get(i));
-		}
+		ks.add("hello");
+		ks.add("balah");
+		ks.add("shoo");
+		ks.add("hello");
+		ks.add("balah");
+		ks.add("shoo");
+		ks.add("hello");
+		ks.add("balah");
+		ks.add("shoo");
+		ks.add("hello");
+		ks.add("balah");
+		ks.add("shoo");
+
+
+
+		System.out.println(arr);
+		System.out.println(arr.size());
+		System.out.println(ks);
+		System.out.println(ks.size());
+		System.out.println(ks.currentCapacity());
 	}
 }

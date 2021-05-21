@@ -207,4 +207,12 @@ public class KS_ArrayList<T> {
 		arr = new Object[capacity];
 		numOfItems = 0;
 	}
+	
+	public Object[] toArray() {
+		Object copyarr[] = new Object[numOfItems];
+		for(int i=0; i < numOfItems; i++) {
+			copyarr[i] = arr[i];
+		}
+		return copyarr;
+	}
 }

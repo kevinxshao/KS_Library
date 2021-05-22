@@ -215,4 +215,15 @@ public class KS_ArrayList<T> {
 		}
 		return copyarr;
 	}
+	public void trimToSize() {
+		capacity = numOfItems;
+		Object copyarr[] = new Object[capacity];
+		for(int i=0; i < numOfItems; i++) {
+			copyarr[i] = arr[i];
+		}
+		arr = new Object[capacity];
+		for(int i=0; i < numOfItems; i++) {
+			arr[i] = copyarr[i];
+		}
+	}
 }
